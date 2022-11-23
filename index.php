@@ -1,3 +1,8 @@
+// using System.Net;
+ServicePointManager.Expect100Continue = true;
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+// Use SecurityProtocolType.Ssl3 if needed for compatibility reasons
+
 <?php
     // 1. Buat koneksi dengan MySQL
     $con = mysqli_connect("localhost","root","","fakultas");
