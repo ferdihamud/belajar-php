@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
     $id = $_GET['id'];
 
     // Buat koneksi dengan MySQL
-    $con = mysqli_connect("localhost","root","","seal_fakultas");
+    $con = mysqli_connect("localhost","root","","fakultas");
 
     // Check connection
     if (mysqli_connect_errno()) {
@@ -46,7 +46,7 @@ if (isset($_POST['submit'])){
     $alamat = $_POST['alamat'];
 
     // Buat koneksi dengan MySQL
-    $con = mysqli_connect("localhost","root","","seal_fakultas");
+    $con = mysqli_connect("localhost","root","","fakultas");
 
     // Check connection
     if (mysqli_connect_errno()) {
@@ -79,6 +79,7 @@ if (isset($_POST['submit'])){
     <title>Update</title>
 </head>
 <body>
+    <h1>Update Data Mahasiswa</h1>
     <?php if(isset($_GET['id'])): ?>
     <form action="" method="post">
         NIM: <input type="text" name="nim" value="<?php echo $nim; ?>"><br>
